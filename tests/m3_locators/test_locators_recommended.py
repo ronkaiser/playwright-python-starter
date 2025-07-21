@@ -1,5 +1,6 @@
 from playwright.sync_api import Page, expect, BrowserType
 
+BASE_URL = 'http://localhost:8000/'
 
 # to slow things down
 def test_headless_and_slow_mo(browser_type: BrowserType):
@@ -7,4 +8,4 @@ def test_headless_and_slow_mo(browser_type: BrowserType):
 
 
 def test_recommended_locators(page: Page):
-    page.goto('')
+    page.goto(BASE_URL)
